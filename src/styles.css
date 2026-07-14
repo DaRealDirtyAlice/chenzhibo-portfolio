@@ -121,6 +121,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .carousel-arrow:hover { color: #04101a; background: var(--blue); border-color: var(--blue); transform: translateY(-50%) scale(1.06); }
 .carousel-previous { left: -26px; }
 .carousel-next { right: -26px; }
+.project-stage > .carousel-arrow,
+.certificate-stage > .carousel-arrow { top: 295px; }
 .project-enter { animation: project-in .42s ease both; }
 @keyframes project-in { from { opacity: 0; transform: translateX(18px); } to { opacity: 1; transform: translateX(0); } }
 
@@ -210,6 +212,8 @@ footer { background: #070b0e; border-top: 1px solid var(--line); }
   .project-archive .project-card:nth-child(even) .project-visual { order: 0; }.project-card .project-visual { border: 0; border-bottom: 1px solid var(--line); }.project-archive .project-card:nth-child(even) .project-visual { border-left: 0; border-bottom: 1px solid var(--line); }
   .project-copy h3 { margin-top: 50px; }.strength-grid { grid-template-columns: 1fr 1fr; }.about { gap: 50px; }.footer-bottom { grid-template-columns: 1fr auto; }.footer-bottom > div { display: none; }
   .certificate-card { grid-template-columns: 1fr; }.certificate-visual { min-height: 500px; border-right: 0; border-bottom: 1px solid var(--line); }.certificate-copy { min-height: 500px; }.certificate-copy h3 { margin-top: 52px; }
+  .project-stage > .carousel-arrow { top: clamp(180px, 27vw, 250px); }
+  .certificate-stage > .carousel-arrow { top: 250px; }
   .archive-main { padding-block: 80px 100px; }
 }
 
@@ -219,6 +223,8 @@ footer { background: #070b0e; border-top: 1px solid var(--line); }
   .metrics { grid-template-columns: 1fr; }.metrics > div { border-left: 0; border-top: 1px solid var(--line); padding: 32px 0; }.metrics > div:first-child { padding-left: 0; border-top: 0; }.metrics > div:nth-child(3) { border-left: 0; }
   .editorial-heading { margin-bottom: 44px; }.section-number strong { font-size: 72px; }.section-number span { font-size: 8px; }.section-heading { margin-bottom: 48px; }.project-visual { padding: 10px; }.project-copy { padding: 30px 22px; }.project-copy h3 { margin-top: 38px; }.visual-shell { aspect-ratio: .95; }.project-actions { align-items: flex-start; flex-direction: column; }
   .certificate-visual { min-height: 390px; padding: 16px; }.certificate-frame { padding: 24px; }.certificate-mark { margin-top: 54px; }.certificate-copy { min-height: 470px; padding: 30px 22px; }.certificate-coverage ul { grid-template-columns: 1fr; }.certificate-seal { width: 72px; height: 72px; right: 24px; }.certificate-status { left: 24px; }.credential-verification { align-items: flex-start; flex-direction: column; }
+  .project-stage > .carousel-arrow { top: clamp(150px, 42vw, 210px); }
+  .certificate-stage > .carousel-arrow { top: 195px; }
   .work-intro { justify-self: start; }.carousel-arrow { width: 44px; height: 44px; }.carousel-previous { left: -12px; }.carousel-next { right: -12px; }.archive-back { font-size: 0; }.archive-back svg { width: 21px; height: 21px; }.archive-heading h1 { font-size: clamp(48px, 14vw, 70px); }
   .signal-chart { height: 100px; }.topology .node { width: 54px; height: 54px; }.pipeline { padding: 28px 14px; grid-template-columns: 1fr 22px 1fr 22px 1fr; }.telemetry-grid { grid-template-columns: 1fr; justify-items: center; }.telemetry-lines { width: 100%; }
   .skill-row { grid-template-columns: 34px 1fr 20px; gap: 14px; padding: 24px 0; }.skill-row p { grid-column: 2 / 4; margin: 0; }.strength-grid { grid-template-columns: 1fr; }

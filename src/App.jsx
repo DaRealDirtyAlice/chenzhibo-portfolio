@@ -19,7 +19,7 @@ const projects = [
   {
     id: "01",
     kind: "Detection engineering",
-    title: "SOC Detection & Response Lab",
+    title: "SOC Detection & Response Project",
     period: "2026 — Present",
     description:
       "A three-node SOC environment that brings endpoint and network telemetry into one investigation workflow.",
