@@ -150,9 +150,12 @@ const certifications = [
   },
 ];
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, isActive = true }) {
   return (
-    <article className="project-card project-enter">
+    <article
+      className={`project-card carousel-slide${isActive ? " is-active project-enter" : ""}`}
+      aria-hidden={!isActive}
+    >
       <div className="project-visual">
         <img className="project-cover" src={project.image} alt={`${project.title} architecture illustration`} />
       </div>
@@ -343,7 +346,9 @@ function App() {
             <div className="project-stage">
               <button className="carousel-arrow carousel-previous" type="button" onClick={showPrevious} aria-label="Previous project"><ArrowLeft size={22} /></button>
               <div className="projects project-carousel" aria-live="polite">
-                <ProjectCard project={projects[activeProject]} key={projects[activeProject].id} />
+                {projects.map((project, index) => (
+                  <ProjectCard project={project} isActive={index === activeProject} key={project.id} />
+                ))}
               </div>
               <button className="carousel-arrow carousel-next" type="button" onClick={showNext} aria-label="Next project"><ArrowRight size={22} /></button>
             </div>
@@ -361,26 +366,34 @@ function App() {
             </div>
             <div className="certificate-stage">
               <button className="carousel-arrow carousel-previous" type="button" onClick={showPreviousCertification} aria-label="Previous certification"><ArrowLeft size={22} /></button>
-              <article className="certificate-card project-enter" key={certifications[activeCertification].number}>
-                <CertificateVisual certification={certifications[activeCertification]} />
-                <div className="certificate-copy">
-                  <div className="certificate-meta"><span>{certifications[activeCertification].number} / {certifications[activeCertification].issuer}</span><span>{certifications[activeCertification].status}</span></div>
-                  <h3>{certifications[activeCertification].title}</h3>
-                  <p>{certifications[activeCertification].description}</p>
-                  <div className="certificate-coverage">
-                    <span className="coverage-label">Achievement details</span>
-                    <ul>{certifications[activeCertification].coverage.map((item) => <li key={item}>{item}</li>)}</ul>
-                  </div>
-                  {certifications[activeCertification].verifyUrl && (
-                    <div className="credential-verification">
-                      <div><span>Verification code</span><code>{certifications[activeCertification].verifyCode}</code></div>
-                      <a href={certifications[activeCertification].verifyUrl} target="_blank" rel="noreferrer">
-                        Verify <ArrowUpRight size={16} />
-                      </a>
+              <div className="certificate-carousel" aria-live="polite">
+                {certifications.map((certification, index) => (
+                  <article
+                    className={`certificate-card carousel-slide${index === activeCertification ? " is-active project-enter" : ""}`}
+                    aria-hidden={index !== activeCertification}
+                    key={certification.number}
+                  >
+                    <CertificateVisual certification={certification} />
+                    <div className="certificate-copy">
+                      <div className="certificate-meta"><span>{certification.number} / {certification.issuer}</span><span>{certification.status}</span></div>
+                      <h3>{certification.title}</h3>
+                      <p>{certification.description}</p>
+                      <div className="certificate-coverage">
+                        <span className="coverage-label">Achievement details</span>
+                        <ul>{certification.coverage.map((item) => <li key={item}>{item}</li>)}</ul>
+                      </div>
+                      {certification.verifyUrl && (
+                        <div className="credential-verification">
+                          <div><span>Verification code</span><code>{certification.verifyCode}</code></div>
+                          <a href={certification.verifyUrl} target="_blank" rel="noreferrer">
+                            Verify <ArrowUpRight size={16} />
+                          </a>
+                        </div>
+                      )}
                     </div>
-                  )}
-                </div>
-              </article>
+                  </article>
+                ))}
+              </div>
               <button className="carousel-arrow carousel-next" type="button" onClick={showNextCertification} aria-label="Next certification"><ArrowRight size={22} /></button>
             </div>
           </div>
