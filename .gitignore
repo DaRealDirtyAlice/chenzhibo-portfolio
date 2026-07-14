@@ -1,0 +1,10 @@
+node_modules
+dist
+.DS_Store
+*.local
+.env
+public/credentials/*.pdf
+public/credentials/comptia-cysa-plus.png
+public/credentials/comptia-security-plus.png
+public/credentials/ejpt.png
+public/credentials/presidents-honour-list.png

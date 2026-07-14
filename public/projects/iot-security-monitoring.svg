@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">IoT Security Monitoring architecture</title>
+  <desc id="desc">Raspberry Pi, MQTT, AWS IoT Core, Suricata, VPC Flow Logs, and Elastic telemetry pipeline.</desc>
+  <defs><pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" fill="none" stroke="#183047" opacity=".45"/></pattern><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0l10 5-10 5z" fill="#57b7ff"/></marker></defs>
+  <rect width="1600" height="1000" fill="#071019"/><rect width="1600" height="1000" fill="url(#grid)"/>
+  <g font-family="Consolas, monospace">
+    <text x="82" y="92" fill="#57b7ff" font-size="20" letter-spacing="5">IOT SECURITY MONITORING</text><text x="82" y="136" fill="#8da0b1" font-size="17">Device, network, and cloud telemetry combined in one searchable pipeline</text>
+    <text x="82" y="220" fill="#7b91a4" font-size="15" letter-spacing="3">END-TO-END DATA FLOW</text>
+    <g><rect x="82" y="260" width="300" height="218" rx="7" fill="#0b1b28" stroke="#24445f" stroke-width="2"/><text x="112" y="308" fill="#57b7ff" font-size="14">01 / EDGE DEVICE</text><text x="112" y="382" fill="#f0f4f7" font-size="31" font-weight="700">RASPBERRY PI</text><text x="112" y="426" fill="#8da0b1" font-size="16">Sensor telemetry</text>
+    <rect x="454" y="260" width="300" height="218" rx="7" fill="#0b1b28" stroke="#24445f" stroke-width="2"/><text x="484" y="308" fill="#57b7ff" font-size="14">02 / MESSAGE FLOW</text><text x="484" y="382" fill="#f0f4f7" font-size="36" font-weight="700">MQTT</text><text x="484" y="426" fill="#8da0b1" font-size="16">Publish + subscribe</text>
+    <rect x="826" y="260" width="300" height="218" rx="7" fill="#0b1b28" stroke="#24445f" stroke-width="2"/><text x="856" y="308" fill="#57b7ff" font-size="14">03 / CLOUD INGEST</text><text x="856" y="382" fill="#f0f4f7" font-size="31" font-weight="700">AWS IOT CORE</text><text x="856" y="426" fill="#8da0b1" font-size="16">Connected device events</text>
+    <rect x="1198" y="260" width="320" height="218" rx="7" fill="#0b1b28" stroke="#57b7ff" stroke-width="2"/><text x="1228" y="308" fill="#57b7ff" font-size="14">04 / SEARCH + REVIEW</text><text x="1228" y="372" fill="#f0f4f7" font-size="29" font-weight="700">ELASTIC</text><text x="1228" y="410" fill="#f0f4f7" font-size="29" font-weight="700">+ KIBANA</text><text x="1228" y="450" fill="#8da0b1" font-size="16">Investigate findings</text></g>
+    <path d="M382 369h52" stroke="#57b7ff" stroke-width="3" marker-end="url(#arrow)"/><path d="M754 369h52" stroke="#57b7ff" stroke-width="3" marker-end="url(#arrow)"/><path d="M1126 369h52" stroke="#57b7ff" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <text x="82" y="560" fill="#7b91a4" font-size="15" letter-spacing="3">THREE TELEMETRY SOURCES</text>
+    <rect x="82" y="590" width="436" height="92" rx="5" fill="#0c1822" stroke="#24445f"/><text x="112" y="646" fill="#eef3f6" font-size="20">01  IOT APPLICATION EVENTS</text>
+    <rect x="582" y="590" width="436" height="92" rx="5" fill="#0c1822" stroke="#24445f"/><text x="612" y="646" fill="#eef3f6" font-size="20">02  SURICATA ALERTS</text>
+    <rect x="1082" y="590" width="436" height="92" rx="5" fill="#0c1822" stroke="#24445f"/><text x="1112" y="646" fill="#eef3f6" font-size="20">03  VPC FLOW LOGS</text>
+
+    <g><rect x="82" y="742" width="436" height="168" fill="#0b1b28" stroke="#24445f"/><text x="112" y="790" fill="#7b91a4" font-size="14" letter-spacing="3">EVENTS REVIEWED</text><text x="112" y="866" fill="#57b7ff" font-size="60">1,200+</text>
+    <rect x="582" y="742" width="436" height="168" fill="#0b1b28" stroke="#24445f"/><text x="612" y="790" fill="#7b91a4" font-size="14" letter-spacing="3">SUSPICIOUS FINDINGS</text><text x="612" y="866" fill="#57b7ff" font-size="60">45+</text>
+    <rect x="1082" y="742" width="436" height="168" fill="#0b1b28" stroke="#24445f"/><text x="1112" y="790" fill="#7b91a4" font-size="14" letter-spacing="3">SIMULATED THREATS</text><text x="1112" y="835" fill="#f0f4f7" font-size="18">UNAUTHORIZED MQTT</text><text x="1112" y="870" fill="#f0f4f7" font-size="18">DDoS-LIKE TRAFFIC</text></g>
+  </g>
+</svg>

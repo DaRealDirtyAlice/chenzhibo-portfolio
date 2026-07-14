@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">SOC Detection and Response Lab architecture</title>
+  <desc id="desc">Three-node Wazuh, Sysmon, and Suricata lab with detection metrics.</desc>
+  <defs>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" fill="none" stroke="#183047" stroke-width="1" opacity=".45"/></pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0l10 5-10 5z" fill="#57b7ff"/></marker>
+  </defs>
+  <rect width="1600" height="1000" fill="#071019"/><rect width="1600" height="1000" fill="url(#grid)"/>
+  <g font-family="Consolas, monospace">
+    <text x="82" y="92" fill="#57b7ff" font-size="20" letter-spacing="5">SOC DETECTION &amp; RESPONSE LAB</text>
+    <text x="82" y="136" fill="#8da0b1" font-size="17">Endpoint + network telemetry correlated in one investigation workflow</text>
+
+    <rect x="82" y="205" width="380" height="280" rx="8" fill="#091620" stroke="#24445f" stroke-width="2"/>
+    <text x="112" y="250" fill="#7b91a4" font-size="15" letter-spacing="3">ENDPOINT TELEMETRY</text>
+    <text x="112" y="320" fill="#f0f4f7" font-size="34" font-weight="700">WINDOWS</text>
+    <text x="112" y="362" fill="#57b7ff" font-size="22">Sysmon</text>
+    <path d="M112 408h270" stroke="#24445f"/>
+    <text x="112" y="450" fill="#aebbc5" font-size="16">Process creation · Logon events</text>
+
+    <rect x="610" y="205" width="380" height="280" rx="8" fill="#0b1b28" stroke="#57b7ff" stroke-width="2"/>
+    <text x="640" y="250" fill="#57b7ff" font-size="15" letter-spacing="3">CENTRAL SIEM</text>
+    <text x="640" y="320" fill="#f0f4f7" font-size="34" font-weight="700">WAZUH</text>
+    <text x="640" y="362" fill="#57b7ff" font-size="22">Manager + Dashboard</text>
+    <path d="M640 408h270" stroke="#315b7c"/>
+    <text x="640" y="450" fill="#aebbc5" font-size="16">Correlate · Triage · Document</text>
+
+    <rect x="1138" y="205" width="380" height="280" rx="8" fill="#091620" stroke="#24445f" stroke-width="2"/>
+    <text x="1168" y="250" fill="#7b91a4" font-size="15" letter-spacing="3">NETWORK TELEMETRY</text>
+    <text x="1168" y="320" fill="#f0f4f7" font-size="34" font-weight="700">UBUNTU</text>
+    <text x="1168" y="362" fill="#57b7ff" font-size="22">Suricata IDS</text>
+    <path d="M1168 408h270" stroke="#24445f"/>
+    <text x="1168" y="450" fill="#aebbc5" font-size="16">Packet alerts · Scan activity</text>
+
+    <path d="M462 345H590" fill="none" stroke="#57b7ff" stroke-width="3" marker-end="url(#arrow)"/><path d="M1138 345h-128" fill="none" stroke="#57b7ff" stroke-width="3" marker-end="url(#arrow)"/>
+    <text x="498" y="325" fill="#57b7ff" font-size="13">EVENTS</text><text x="1046" y="325" fill="#57b7ff" font-size="13">ALERTS</text>
+
+    <text x="82" y="570" fill="#7b91a4" font-size="15" letter-spacing="3">VALIDATED DETECTIONS</text>
+    <g font-size="19"><rect x="82" y="600" width="440" height="72" rx="5" fill="#0c1822" stroke="#24445f"/><text x="112" y="645" fill="#eef3f6">01  FAILED LOGIN</text><rect x="580" y="600" width="440" height="72" rx="5" fill="#0c1822" stroke="#24445f"/><text x="610" y="645" fill="#eef3f6">02  PORT SCAN</text><rect x="1078" y="600" width="440" height="72" rx="5" fill="#0c1822" stroke="#24445f"/><text x="1108" y="645" fill="#eef3f6">03  IDS TRAFFIC</text></g>
+
+    <g><rect x="82" y="742" width="436" height="168" fill="#0b1b28" stroke="#24445f"/><text x="112" y="790" fill="#7b91a4" font-size="14" letter-spacing="3">LAB NODES</text><text x="112" y="866" fill="#57b7ff" font-size="60">03</text>
+    <rect x="582" y="742" width="436" height="168" fill="#0b1b28" stroke="#24445f"/><text x="612" y="790" fill="#7b91a4" font-size="14" letter-spacing="3">PLANNED EVENTS</text><text x="612" y="866" fill="#57b7ff" font-size="60">20,000+</text>
+    <rect x="1082" y="742" width="436" height="168" fill="#0b1b28" stroke="#24445f"/><text x="1112" y="790" fill="#7b91a4" font-size="14" letter-spacing="3">INDICATORS TRIAGED</text><text x="1112" y="866" fill="#57b7ff" font-size="60">50+</text></g>
+  </g>
+</svg>

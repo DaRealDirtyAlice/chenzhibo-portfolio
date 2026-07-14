@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">ICS Honeypot and Threat Analysis architecture</title>
+  <desc id="desc">Isolated AWS environment with T-Pot, Conpot, telemetry analysis, Shodan, and Censys.</desc>
+  <defs><pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" fill="none" stroke="#183047" opacity=".45"/></pattern><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0l10 5-10 5z" fill="#57b7ff"/></marker></defs>
+  <rect width="1600" height="1000" fill="#071019"/><rect width="1600" height="1000" fill="url(#grid)"/>
+  <g font-family="Consolas, monospace">
+    <text x="82" y="92" fill="#57b7ff" font-size="20" letter-spacing="5">ICS HONEYPOT &amp; THREAT ANALYSIS</text><text x="82" y="136" fill="#8da0b1" font-size="17">Observe simulated OT services and translate hostile interactions into risk findings</text>
+    <rect x="82" y="205" width="930" height="470" rx="10" fill="#09141e" stroke="#315b7c" stroke-width="2" stroke-dasharray="12 9"/>
+    <text x="116" y="250" fill="#57b7ff" font-size="16" letter-spacing="3">ISOLATED AWS ENVIRONMENT</text>
+    <rect x="132" y="304" width="360" height="280" rx="7" fill="#0b1b28" stroke="#24445f" stroke-width="2"/><text x="166" y="356" fill="#7b91a4" font-size="14" letter-spacing="3">MULTI-SERVICE HONEYPOT</text><text x="166" y="430" fill="#f0f4f7" font-size="42" font-weight="700">T-POT</text><path d="M166 466h290" stroke="#24445f"/><text x="166" y="510" fill="#aebbc5" font-size="17">Capture hostile connections</text><text x="166" y="544" fill="#aebbc5" font-size="17">across exposed services</text>
+    <rect x="574" y="304" width="360" height="280" rx="7" fill="#0b1b28" stroke="#24445f" stroke-width="2"/><text x="608" y="356" fill="#7b91a4" font-size="14" letter-spacing="3">OT / ICS SIMULATION</text><text x="608" y="430" fill="#f0f4f7" font-size="42" font-weight="700">CONPOT</text><path d="M608 466h290" stroke="#24445f"/><text x="608" y="510" fill="#aebbc5" font-size="17">Simulated industrial services</text><text x="608" y="544" fill="#aebbc5" font-size="17">and protocol telemetry</text>
+
+    <path d="M1012 440h120" stroke="#57b7ff" stroke-width="3" marker-end="url(#arrow)"/><text x="1027" y="418" fill="#57b7ff" font-size="13">LOGS</text>
+    <rect x="1132" y="205" width="386" height="470" rx="8" fill="#0b1b28" stroke="#57b7ff" stroke-width="2"/><text x="1166" y="250" fill="#57b7ff" font-size="15" letter-spacing="3">ANALYSIS WORKFLOW</text>
+    <text x="1166" y="325" fill="#f0f4f7" font-size="25">01  COLLECT</text><text x="1166" y="365" fill="#8da0b1" font-size="16">Honeypot interaction logs</text><path d="M1166 398h318" stroke="#24445f"/>
+    <text x="1166" y="455" fill="#f0f4f7" font-size="25">02  COMPARE</text><text x="1166" y="495" fill="#8da0b1" font-size="16">Shodan + Censys exposure</text><path d="M1166 528h318" stroke="#24445f"/>
+    <text x="1166" y="585" fill="#f0f4f7" font-size="25">03  REPORT</text><text x="1166" y="625" fill="#8da0b1" font-size="16">Mitigation + escalation notes</text>
+
+    <g><rect x="82" y="742" width="436" height="168" fill="#0b1b28" stroke="#24445f"/><text x="112" y="790" fill="#7b91a4" font-size="14" letter-spacing="3">LOGS ANALYZED</text><text x="112" y="866" fill="#57b7ff" font-size="60">8,000+</text>
+    <rect x="582" y="742" width="436" height="168" fill="#0b1b28" stroke="#24445f"/><text x="612" y="790" fill="#7b91a4" font-size="14" letter-spacing="3">SUSPICIOUS INTERACTIONS</text><text x="612" y="866" fill="#57b7ff" font-size="60">320+</text>
+    <rect x="1082" y="742" width="436" height="168" fill="#0b1b28" stroke="#24445f"/><text x="1112" y="790" fill="#7b91a4" font-size="14" letter-spacing="3">OSINT SOURCES</text><text x="1112" y="850" fill="#f0f4f7" font-size="28">SHODAN</text><text x="1112" y="885" fill="#57b7ff" font-size="28">CENSYS</text></g>
+  </g>
+</svg>
