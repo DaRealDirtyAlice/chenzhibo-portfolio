@@ -6,23 +6,36 @@ import {
   ArrowUpRight,
   BookOpenCheck,
   ChevronDown,
-  Clock3,
   FileCheck2,
   Mail,
   MapPin,
   Network,
-  Radar,
   ShieldCheck,
 } from "lucide-react";
 
 const projects = [
   {
     id: "01",
-    kind: "Detection engineering",
+    kind: "IT support / Service desk",
+    title: "Northstar MSP IT Support & Service Desk Project",
+    period: "2026 — In Progress",
+    description:
+      "Building a simulated MSP support environment for a 20-user professional services client across identity, endpoints, access, networking, and service-desk workflows.",
+    outcomes: [
+      "Building a four-department client environment for HR, Finance, Sales, and Operations",
+      "Implementing Windows Server, AD, DNS, DHCP, file access, and Windows 11 support workflows",
+      "Planning 30 documented tickets, 10 knowledge-base articles, and 3 PowerShell automations",
+    ],
+    tools: ["Windows Server", "Active Directory", "Microsoft 365", "PowerShell", "Ticketing"],
+    visual: "support",
+  },
+  {
+    id: "02",
+    kind: "Endpoint & network support",
     title: "SOC Detection & Response Project",
     period: "2026 — Present",
     description:
-      "A three-node SOC environment that brings endpoint and network telemetry into one investigation workflow.",
+      "A three-node Windows and Ubuntu environment used to validate endpoint services, network connectivity, log collection, and structured troubleshooting.",
     outcomes: [
       "Built Wazuh and Suricata monitoring across Ubuntu and Windows",
       "Validated failed-login, port-scan, and IDS test coverage",
@@ -33,27 +46,12 @@ const projects = [
     github: "https://github.com/DaRealDirtyAlice/soc-detection-response-project",
   },
   {
-    id: "02",
-    kind: "OT / ICS security",
-    title: "ICS Honeypot & Threat Analysis",
-    period: "2025",
-    description:
-      "An isolated AWS honeypot environment for observing simulated OT/ICS services and translating telemetry into risk findings.",
-    outcomes: [
-      "Deployed T-Pot and Conpot for OT/ICS service monitoring",
-      "Analyzed 8,000+ logs and flagged 320+ suspicious interactions",
-      "Produced mitigation notes and escalation-ready reports",
-    ],
-    tools: ["AWS", "T-Pot", "Conpot", "Shodan", "Censys"],
-    image: "/projects/ics-honeypot-analysis.svg",
-  },
-  {
     id: "03",
-    kind: "Cloud & IoT security",
+    kind: "Cloud-connected systems",
     title: "IoT Security Monitoring",
     period: "2025",
     description:
-      "A cloud-connected monitoring lab combining device, network, and AWS telemetry to investigate simulated IoT threats.",
+      "A cloud-connected environment combining device, network, and AWS telemetry to validate connectivity and isolate service issues.",
     outcomes: [
       "Connected three telemetry sources through a searchable SIEM pipeline",
       "Simulated unauthorized MQTT access and DDoS-like traffic",
@@ -62,82 +60,97 @@ const projects = [
     tools: ["AWS IoT", "MQTT", "Suricata", "Elastic", "Kibana"],
     image: "/projects/iot-security-monitoring.svg",
   },
+  {
+    id: "04",
+    kind: "Linux & cloud operations",
+    title: "ICS Honeypot & Threat Analysis",
+    period: "2025",
+    description:
+      "An isolated AWS environment used to deploy, validate, and document simulated OT/ICS services and supporting Linux infrastructure.",
+    outcomes: [
+      "Deployed and validated T-Pot and Conpot services in AWS",
+      "Reviewed 8,000+ logs and documented 320+ suspicious interactions",
+      "Produced clear mitigation notes and escalation-ready reports",
+    ],
+    tools: ["AWS", "Linux", "T-Pot", "Conpot", "Documentation"],
+    image: "/projects/ics-honeypot-analysis.svg",
+  },
 ];
 
 const skills = [
-  ["Security operations", "SOC monitoring, alert triage, log review, incident documentation"],
-  ["SIEM & endpoint", "Wazuh, Splunk, Elasticsearch, Kibana, Filebeat, Windows Endpoint"],
-  ["Network & cloud", "Suricata, AWS, VPC Flow Logs, T-Pot, Conpot, Shodan, Censys"],
-  ["IoT & workflow", "AWS IoT Core, MQTT, Python, AI-assisted research and log comparison"],
+  ["End-user support", "Issue discovery, Windows troubleshooting, user guidance, remote-support thinking, and knowledge-base documentation"],
+  ["Identity & endpoint", "Windows Server, Active Directory, Windows 11, user accounts, groups, permissions, and endpoint health"],
+  ["Network & cloud", "TCP/IP, DNS, DHCP, VPN, file shares, AWS, and Microsoft 365 support workflows in progress"],
+  ["Support operations", "Ticket classification, SLA prioritization, escalation notes, PowerShell automation, and security-aware support"],
 ];
 
 const strengths = [
   {
-    icon: Radar,
+    icon: BookOpenCheck,
     number: "01",
-    title: "Signal-focused triage",
-    text: "I follow evidence across endpoint and network telemetry to separate meaningful indicators from noise.",
+    title: "Understand",
+    text: "Confirm the user, device, symptoms, recent changes, and business impact before changing anything.",
   },
   {
     icon: Network,
     number: "02",
-    title: "Cross-environment visibility",
-    text: "Hands-on work spans Windows, Linux, AWS, IoT, and simulated OT/ICS services.",
+    title: "Isolate",
+    text: "Narrow the issue to identity, endpoint, application, network, cloud service, or user workflow.",
+  },
+  {
+    icon: ShieldCheck,
+    number: "03",
+    title: "Resolve & validate",
+    text: "Apply the lowest-risk fix, test the result, and confirm the user can resume normal work.",
   },
   {
     icon: FileCheck2,
-    number: "03",
-    title: "Actionable documentation",
-    text: "Findings are translated into risk notes, remediation steps, and escalation-ready summaries.",
-  },
-  {
-    icon: Clock3,
     number: "04",
-    title: "Shift-ready focus",
-    text: "Comfortable with evening and overnight monitoring, investigation, and structured handoffs.",
+    title: "Document & escalate",
+    text: "Leave complete troubleshooting notes, validation evidence, and a clear escalation path when needed.",
   },
 ];
 
 const certifications = [
   {
     number: "01",
-    status: "Earned · May 4, 2026",
-    title: "CompTIA CySA+",
-    issuer: "CompTIA",
-    image: "/credentials/comptia-cysa-plus-screenshot.png",
-    verifyUrl: "https://verify.comptia.org/",
-    verifyCode: "fa18a229a3984b85bd0c39662e7ec0d4",
-    description: "Threat detection, vulnerability management, SOC operations, and evidence analysis.",
-    coverage: ["CS0-003 exam", "Valid through May 4, 2029", "Security operations", "Threat analysis"],
-  },
-  {
-    number: "02",
     status: "Earned · June 5, 2025",
     title: "CompTIA Security+",
     issuer: "CompTIA",
     image: "/credentials/comptia-security-plus-screenshot.png",
     verifyUrl: "https://verify.comptia.org/",
     verifyCode: "00DD5ZXS7ME11272",
-    description: "Security concepts, risk management, secure operations, and incident response.",
-    coverage: ["SY0-701 exam", "Valid through June 5, 2028", "Risk management", "Secure operations"],
+    description: "Security-aware technical support across access, endpoints, networks, operations, and incident response.",
+    coverage: ["SY0-701 exam", "Valid through June 5, 2028", "Secure operations", "Risk awareness"],
   },
   {
-    number: "03",
-    status: "Earned · November 18, 2025",
-    title: "INE eJPT",
-    issuer: "INE Security",
-    image: "/credentials/ejpt-screenshot.png",
-    description: "Information gathering, exploitation, enumeration, and lateral movement.",
-    coverage: ["Reconnaissance", "Enumeration", "Exploitation", "Lateral movement"],
-  },
-  {
-    number: "04",
+    number: "02",
     status: "Awarded · Summer 2025",
     title: "President's Honour List",
     issuer: "Seneca Polytechnic",
     image: "/credentials/presidents-honour-list-screenshot.png",
     description: "Academic recognition for outstanding achievement in the Cybersecurity and Threat Management program.",
     coverage: ["Academic recognition", "Cybersecurity & Threat Management", "Summer 2025", "Seneca Polytechnic"],
+  },
+  {
+    number: "03",
+    status: "Earned · May 4, 2026",
+    title: "CompTIA CySA+",
+    issuer: "CompTIA",
+    image: "/credentials/comptia-cysa-plus-screenshot.png",
+    verifyUrl: "https://verify.comptia.org/",
+    verifyCode: "fa18a229a3984b85bd0c39662e7ec0d4",
+    description: "Additional depth in threat detection, vulnerability management, SOC operations, and evidence analysis.",
+    coverage: ["CS0-003 exam", "Valid through May 4, 2029", "Security operations", "Threat analysis"],
+  },
+  {
+    number: "04",
+    status: "Earned · November 18, 2025",
+    title: "INE eJPT",
+    issuer: "INE Security",
+    image: "/credentials/ejpt-screenshot.png",
+    description: "Hands-on technical depth in information gathering, enumeration, exploitation, and lateral movement.",
+    coverage: ["Reconnaissance", "Enumeration", "Exploitation", "Lateral movement"],
   },
   {
     number: "05",
@@ -150,14 +163,40 @@ const certifications = [
   },
 ];
 
+function SupportProjectVisual() {
+  return (
+    <div className="support-visual" aria-label="Northstar simulated MSP support environment overview">
+      <div className="support-visual-head"><span>Northstar / Client environment</span><span className="support-status"><i /> In progress</span></div>
+      <div className="support-kpis">
+        <div><strong>20</strong><span>Users</span></div>
+        <div><strong>04</strong><span>Departments</span></div>
+        <div><strong>30</strong><span>Tickets · target</span></div>
+      </div>
+      <div className="support-map" aria-hidden="true">
+        <div className="support-map-node"><span>Client</span><strong>Users + devices</strong><small>HR · Finance · Sales · Ops</small></div>
+        <i />
+        <div className="support-map-node support-map-primary"><span>L1</span><strong>Service desk</strong><small>Diagnose · resolve · escalate</small></div>
+        <i />
+        <div className="support-map-node"><span>Systems</span><strong>Business services</strong><small>Identity · endpoint · network</small></div>
+      </div>
+      <div className="support-stack">
+        <span>AD</span><span>DNS</span><span>DHCP</span><span>WIN 11</span><span>M365</span><span>FILE ACCESS</span>
+      </div>
+      <div className="support-visual-foot"><span>10 KB articles · target</span><span>03 automations · target</span></div>
+    </div>
+  );
+}
+
 function ProjectCard({ project, isActive = true }) {
   return (
     <article
-      className={`project-card carousel-slide${isActive ? " is-active project-enter" : ""}`}
+      className={`project-card carousel-slide${project.visual === "support" ? " support-card" : ""}${isActive ? " is-active project-enter" : ""}`}
       aria-hidden={!isActive}
     >
       <div className="project-visual">
-        <img className="project-cover" src={project.image} alt={`${project.title} architecture illustration`} />
+        {project.visual === "support"
+          ? <SupportProjectVisual />
+          : <img className="project-cover" src={project.image} alt={`${project.title} architecture illustration`} />}
       </div>
       <div className="project-copy">
         <div className="project-meta"><span>{project.id} / {project.kind}</span><span>{project.period}</span></div>
@@ -207,14 +246,14 @@ function ProjectArchive() {
   return (
     <div className="site archive-page">
       <nav className="nav page-width" aria-label="Project page navigation">
-        <a className="brand" href="#top"><span>ZC</span><small>Security Portfolio</small></a>
+        <a className="brand" href="#top"><span>ZC</span><small>IT Support Portfolio</small></a>
         <a className="archive-back" href="#work"><ArrowLeft size={16} /> Back to portfolio</a>
       </nav>
       <main className="archive-main page-width">
         <div className="archive-heading">
           <span className="section-label">All work</span>
-          <h1>Security projects built around evidence.</h1>
-          <p>A complete view of hands-on detection, OT/ICS, and IoT security work.</p>
+          <h1>Support projects built around real troubleshooting.</h1>
+          <p>Hands-on work across identity, endpoints, networks, cloud-connected systems, documentation, and security-aware escalation.</p>
         </div>
         <div className="projects project-archive">
           {projects.map((project) => <ProjectCard project={project} key={project.id} />)}
@@ -295,40 +334,40 @@ function App() {
         </video>
         <div className="hero-grid" aria-hidden="true" />
         <nav className="nav page-width" aria-label="Primary navigation">
-          <a className="brand" href="#top"><span>ZC</span><small>Security Portfolio</small></a>
+          <a className="brand" href="#top"><span>ZC</span><small>IT Support Portfolio</small></a>
           <div className="nav-links">
             <div className="nav-work-menu">
               <button className="nav-work-trigger" type="button" aria-haspopup="menu">
                 Work <ChevronDown size={13} />
               </button>
               <div className="nav-work-options" role="menu">
-                <a href="#work" role="menuitem"><span>Selected work</span><small>On this page</small><ArrowDownRight size={15} /></a>
-                <a href="#/work" role="menuitem"><span>All projects</span><small>Open work page</small><ArrowUpRight size={15} /></a>
+                <a href="#work" role="menuitem"><span>Support work</span><small>Featured case studies</small><ArrowDownRight size={15} /></a>
+                <a href="#/work" role="menuitem"><span>All technical work</span><small>Open project archive</small><ArrowUpRight size={15} /></a>
               </div>
             </div>
-            <a href="#certifications">Achievements</a><a href="#skills">Skills</a><a href="#about">About</a>
+            <a href="#skills">Capabilities</a><a href="#certifications">Credentials</a><a href="#about">About</a>
           </div>
           <a className="nav-contact" href="mailto:czb0728@gmail.com">Get in touch <ArrowUpRight size={16} /></a>
         </nav>
 
         <div className="hero-watermark" aria-hidden="true"><strong>00</strong><span>Portfolio / 2026</span></div>
         <div className="hero-content page-width">
-          <div className="identity"><span className="hero-name">ZHIBO CHEN</span><span className="hero-role accent">SOC ANALYST</span></div>
-          <h1><span className="hero-line">I turn security telemetry into</span><span className="hero-line">clear, actionable findings.</span></h1>
+          <div className="identity"><span className="hero-name">ZHIBO CHEN</span><span className="hero-role accent">IT SUPPORT / TECHNICAL SUPPORT</span></div>
+          <h1><span className="hero-line">I solve user, device,</span><span className="hero-line">and connectivity issues.</span></h1>
           <div className="hero-bottom">
-            <p>Detection, alert triage, and incident documentation across endpoint, network, cloud, IoT, and OT/ICS environments.</p>
+            <p>Structured troubleshooting across Windows, Linux, endpoints, networks, identity, and cloud-connected systems—with clear documentation and escalation.</p>
             <a href="#work" className="round-link" aria-label="View selected work"><ArrowDownRight size={28} /></a>
           </div>
-          <div className="location"><i /><MapPin size={14} /> Toronto · Open to SOC opportunities</div>
+          <div className="location"><i /><MapPin size={14} /> Toronto · Open to IT support opportunities</div>
         </div>
       </header>
 
       <main>
         <section className="metrics page-width" aria-label="Portfolio metrics">
-          <div className="metric-intro"><span className="section-label">At a glance</span><p>Hands-on security work backed by documented evidence.</p></div>
-          <div className="metric"><strong>9,200+</strong><span>Events reviewed</span></div>
-          <div className="metric"><strong>365+</strong><span>Findings investigated</span></div>
-          <div className="metric"><strong>03</strong><span>Security labs</span></div>
+          <div className="metric-intro"><span className="section-label">At a glance</span><p>Hands-on support work grounded in clear troubleshooting and documentation.</p></div>
+          <div className="metric"><strong>02 OS</strong><span>Windows + Linux</span></div>
+          <div className="metric"><strong>L1</strong><span>Structured support workflow</span></div>
+          <div className="metric"><strong>SEC+</strong><span>Security-aware support</span></div>
         </section>
 
         <section className="section editorial-section work-section" id="work">
@@ -336,10 +375,10 @@ function App() {
             <div className="editorial-heading">
               <div className="section-number" aria-hidden="true"><strong>01</strong><span>/ Work</span></div>
               <div className="section-heading">
-                <div><span className="section-label">Selected work</span><h2>Security projects built around evidence.</h2></div>
+                <div><span className="section-label">Featured support work</span><h2>Support projects built around real troubleshooting.</h2></div>
                 <div className="work-intro">
-                  <p>Each project connects telemetry collection to investigation, documentation, and a practical security outcome.</p>
-                  <a className="view-all" href="#/work">View all projects <ArrowUpRight size={17} /></a>
+                  <p>Each project connects a business need to diagnosis, validation, documentation, and a clear support outcome.</p>
+                  <a className="view-all" href="#/work">View all technical work <ArrowUpRight size={17} /></a>
                 </div>
               </div>
             </div>
@@ -358,10 +397,10 @@ function App() {
         <section className="section editorial-section certification-section" id="certifications">
           <div className="page-width">
             <div className="editorial-heading">
-              <div className="section-number" aria-hidden="true"><strong>02</strong><span>/ Achievements</span></div>
+              <div className="section-number" aria-hidden="true"><strong>02</strong><span>/ Credentials</span></div>
               <div className="section-heading certification-heading">
-                <div><span className="section-label">Achievements</span><h2>Certifications and personal achievements.</h2></div>
-                <p>Earned credentials, academic recognition, and active professional development across security operations and investigation.</p>
+                <div><span className="section-label">Credentials</span><h2>Credentials and professional development.</h2></div>
+                <p>Earned certifications, academic recognition, and active development that add security awareness to day-to-day technical support.</p>
               </div>
             </div>
             <div className="certificate-stage">
@@ -402,8 +441,8 @@ function App() {
         <section className="section dark-panel" id="skills">
           <div className="page-width">
             <div className="section-heading">
-              <div><span className="section-label">Capabilities</span><h2>A practical security operations toolkit.</h2></div>
-              <p>Tools matter when they support a clear process: collect, investigate, validate, document, and improve.</p>
+              <div><span className="section-label">Support capabilities</span><h2>A practical toolkit for users, devices, and systems.</h2></div>
+              <p>Tools matter when they support a clear process: understand, isolate, resolve, validate, document, and escalate.</p>
             </div>
             <div className="skills-list">
               {skills.map(([name, items], index) => (
@@ -415,7 +454,7 @@ function App() {
 
         <section className="section page-width strengths">
           <div className="section-heading">
-            <div><span className="section-label">How I work</span><h2>Built for steady, evidence-led operations.</h2></div>
+            <div><span className="section-label">Troubleshooting process</span><h2>Clear support from first report to final handoff.</h2></div>
           </div>
           <div className="strength-grid">
             {strengths.map(({ icon: Icon, number, title, text }) => (
@@ -425,9 +464,9 @@ function App() {
         </section>
 
         <section className="section about page-width" id="about">
-          <div className="about-title"><span className="section-label">About</span><h2>Curious by default.<br /><span>Evidence-driven</span> by practice.</h2></div>
+          <div className="about-title"><span className="section-label">About</span><h2>Patient with people.<br /><span>Systematic</span> with problems.</h2></div>
           <div className="about-copy">
-            <p>I&apos;m an entry-level SOC Analyst focused on following an alert through the evidence, separating signal from noise, and leaving behind notes another analyst can act on.</p>
+            <p>I&apos;m an entry-level IT Support professional building hands-on experience across Windows, Linux, identity, endpoints, networks, and service-desk workflows. I focus on understanding the user&apos;s impact, applying a safe fix, validating the result, and leaving clear notes another technician can use.</p>
             <div className="education">
               <BookOpenCheck size={21} />
               <div><strong>Seneca Polytechnic</strong><span>Graduate Certificate · Cybersecurity & Threat Management · 4.0 GPA</span></div>
@@ -444,7 +483,7 @@ function App() {
       <footer id="contact">
         <div className="footer-main page-width">
           <span className="section-label">Let&apos;s connect</span>
-          <h2>Ready to help turn security data into decisions.</h2>
+          <h2>Ready to support users and keep everyday technology moving.</h2>
           <a className="email-link" href="mailto:czb0728@gmail.com">czb0728@gmail.com <ArrowUpRight size={30} /></a>
           <div className="footer-details">
             <span>Toronto, Ontario</span><span>English · Professional</span><span>Mandarin · Native</span>
